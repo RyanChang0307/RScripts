@@ -5,7 +5,7 @@ library(bit64)
 library(stringr)
 Sys.setenv(HADOOP_CONF_DIR='/etc/hadoop/conf.cloudera.hdfs')
 strCurrentUser<-Sys.info()[["user"]]
-sysdate<-ceiling_date(as.POSIXct(Sys.Date(),tz = "EET"),unit = "month")-months(2)
+sysdate<-ceiling_date(as.POSIXct(Sys.Date(),tz = "EET"),unit = "month")-months(1)
 strMonths<-substr(sysdate,1,7)
 strLogName<-str_glue("logs-{strMonths}.log")
 strOutputPath<-str_glue("~/.auditlogs/{strLogName}")
