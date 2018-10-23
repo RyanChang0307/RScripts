@@ -1,4 +1,4 @@
-a## STEP1: get r packages dependency
+## STEP1: get r packages dependency
 getPackages <- function(packs){
   packages <- unlist(
     tools::package_dependencies(packs, available.packages(),
